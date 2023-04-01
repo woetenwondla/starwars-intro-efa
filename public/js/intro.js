@@ -1,14 +1,14 @@
-/**
- * Intro logic
- * Author: Mariana Azevedo
- * Since: 05/03/2020
- */
+import { warpAnimation } from "./warp.js"
+import { setIncreaseSpeedTrue, setIncreaseSpeedFalse } from "./warp.js"
+import * as mapUtils from "./map.js";
 
 let width = window.innerWidth;
 let height = window.innerHeight;
 
 const intro = document.getElementsByClassName('intro')[0];
 const story = document.getElementsByClassName('story')[0];
+const earthSection = document.getElementById('earth');
+const earthMap = document.getElementById('map');
 const paragraphs = document.getElementsByClassName('paragraphs')[0];
 const sound = document.getElementById('sound');
 
@@ -24,44 +24,57 @@ window.addEventListener('resize', () => {
     paragraphs.style.height = height + 'px';
 });
 
-function init() {
-    intro.className = 'intro text-intro anime-intro';
-    story.className = 'story text-story anime-story';
-    sound.play();
-}
-
 /* Stars screen */
 
-let canvas = document.getElementById('snow');
+let canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d');
 
 canvas.width = width;
 canvas.height = height;
 
-const num = 100;
-const size = 2;
-const elements = [];
+function startAnimation() {
+    sound.play();
 
-function beginning() {
-    for (let i = 0; i < num; i++) {
-        elements[i] = {
-            x: Math.ceil(Math.random() * width),
-            y: Math.ceil(Math.random() * height),
-            size: Math.random() * size,
-        };
-    }
+    intro.className = 'intro text-intro anime-intro';
+    story.className = 'story text-story anime-story';
+    earthSection.className = 'anime-earth-show';
+    earthMap.className = 'anime-earth-expand';
+
+    makeWarpJump();
+    endWarpJump();
+
+    zoomToAlpbach();
+    setStreetViewAndHideTextSections();
 }
 
-function snowing() {
-    ctx.clearRect(0, 0, width, height);
-    for (let i = 0; i < num; i++) {
-        const e = elements[i];
-        ctx.beginPath();
-        ctx.fillStyle = '#FFFFFF';
-        ctx.arc(e.x, e.y, e.size, 0, 2 * Math.PI);
-        ctx.fill();
-    }
+function makeWarpJump() {
+    setTimeout(() => {
+        setIncreaseSpeedTrue();
+    }, 50000);
 }
 
-beginning();
-snowing();
+function endWarpJump() {
+    setTimeout(() => {
+        setIncreaseSpeedFalse();
+    }, 54000);
+}
+
+function zoomToAlpbach() {
+    setTimeout(() => {
+        mapUtils.smoothZoom(mapUtils.getMap(), 20, mapUtils.getMap().getZoom());
+    }, 55000);
+}
+
+function setStreetViewAndHideTextSections() {
+    setTimeout(() => {
+        const panorama = mapUtils.createStreetView();
+        mapUtils.getMap().setStreetView(panorama);
+        paragraphs.className = 'hidden';
+        intro.className = 'hidden';
+    }, 62000);
+}
+
+window.initMap = mapUtils.initMap;
+
+startAnimation();
+warpAnimation();

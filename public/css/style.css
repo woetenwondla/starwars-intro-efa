@@ -44,21 +44,23 @@ body {
     transform: perspective(300px) rotateX(20deg);
 }
 
-.app-btn {
-    color: white;
-    display: inline-block;
-    margin: 10px;
-    padding: 5px;
-    border: 3px solid;
-    border-radius: 5px;
-    cursor: pointer;
+.hidden {
+  display: hidden;
 }
 
 .anime-intro {
   animation: intro 2s ease-out 0s;
 }
 .anime-story {
-  animation: paragraphs 80s linear 2s;
+  animation: paragraphs 50s linear 2s;
+}
+
+.anime-earth-show {
+  animation: earth-show 1s ease-in-out 54s forwards;
+}
+
+.anime-earth-expand {
+  animation: earth-expand 5s ease-in-out 55s forwards;
 }
 
 @keyframes intro {
@@ -84,9 +86,38 @@ body {
     opacity: 1;
   }
   100% {
-    top: -200%;
+    top: -700%;
     opacity: 0;
   }
+}
+
+@keyframes earth-show {
+  0% {
+    opacity: 0;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    display: block
+  }
+}
+
+@keyframes earth-expand {
+  0% {
+    width: 75rem;
+    height: 75rem;
+  }
+  95% {
+    width: 200%;
+    height: 350%;
+    border-radius: 0px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+
 }
 
 /*Stars screen*/
@@ -95,4 +126,24 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+#earth {
+  opacity: 0;
+  display: hidden;
+}
+
+.mapPosition {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map {
+  width: 75rem;
+  height: 75rem;
+  border-radius: 50%;
 }

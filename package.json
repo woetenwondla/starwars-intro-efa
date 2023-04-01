@@ -1,7 +1,7 @@
 {
-  "name": "starwars-intro",
+  "name": "starwars-intro-efa",
   "version": "1.0.0",
-  "description": "Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js",
+  "description": "Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js transitioning to congress centrum alpbach on maps",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mariazevedo88/starwars-intro.git"
+    "url": "git+https://github.com/woetenwondla/starwars-intro-efa"
   },
-  "author": "Mariana Azevedo",
+  "author": "Jan Aigner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mariazevedo88/starwars-intro/issues"
+    "url": "https://github.com/woetenwondla/starwars-intro-efa"
   },
-  "homepage": "https://github.com/mariazevedo88/starwars-intro#readme",
+  "homepage": "https://github.com/woetenwondla/starwars-intro-efa#readme",
   "dependencies": {
     "eslint-friendly-formatter": "^3.0.0",
     "express": "^4.18.2",

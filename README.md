@@ -1,9 +1,6 @@
 # starwars-intro
 Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js (Tutorial by glaucia86 - https://bit.ly/32UG73k)
-
-![Image of the intro](public/images/intro.png)
-
-![Image of the paragraphs](public/images/app.png)
+Original by mariazevedo88, extended by warp speed animations from https://codepen.io/gniziemazity/pen/YzpOzNM and google maps zoom into waypoint functionality by me.
 
 ## Technologies :computer:
 
@@ -11,7 +8,6 @@ Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js (T
 * **[Express.js](https://expressjs.com/)**
 * **[Eslint](https://eslint.org/)**
 * **[Prettier](https://prettier.io/)**
-* **[Heroku](https://www.heroku.com/)**
 
 ## Build Setup
 
@@ -26,6 +22,3 @@ Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js (T
     # running with Node
     npm run start
 
-## Production :rocket:
-
-https://starwarsintro-mari.herokuapp.com/

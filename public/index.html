@@ -22,8 +22,7 @@
     </head>
 
     <body>
-        <div class="app-btn" onclick="init()">Init</div>
-        <canvas id="snow"></canvas>
+        <canvas id="stars"></canvas>
 
         <section class="intro text_intro">
             A Long Time Ago, in a galaxy far,<br> far away ...
@@ -31,30 +30,56 @@
 
         <section class="paragraphs">
             <div class="story text-story">
-                <p class="text-center">Star Wars Episode X</p>
-                <p class="text-center">The Rise of Mari SkyWalker</p>
+                <p class="text-center">Climate Wars Episode I</p>
+                <p class="text-center">The appearance of Jan Aigner</p>
                 <br>
-                <p class="text-center">These are difficult times!</p>
-                <br>
-                <p class="text-center">
-                    The galaxy has heard a mysterious broadcast, a threat of REVENGE 
-                    in the sinister voice of the late EMPEROR PALPATINE.
+                <p class="text-center">The european union is shook by several crisis,
+                    from corona to a currently ongoing war.
+                    No end is so far in sight and there is even a bigger crisis on the horizon,
+                    the climate crisis. Humans have long evaded clear actions to keep the
+                    global warming low. Currently global warming is at 1.2 °C and seems to rise up to 3.2°C
+                    until the mid of the century. This would result in catastrophic heat waves, floods and droughts
+                    killing 100 millions of peoples. 
                 </p>
                 <br>
                 <p class="text-center">
-                    GENERAL MARI SKYWALKER dispatches secret agents to gather intelligence.
+                    Therefore drastic measures have to be taken now.
+                    Still many governments try to flee their responsibility to take actions.
+                    Almost anywhere people rise up to make their governments do the necessary stuff.
+                    Jan Aigner fights with his fellow activists from FFF for a peaceful future.
+                    Although there were some successes during the last months,
+                    it does not seem to be enough to really make a lasting change.
+                    Therefore he is trying to shape his profession to make an impact,
+                    by developing a platform which should help people connect and take collective action.
                 </p>
                 <br>
                 <p class="text-center">
-                    She is the last hope of the Jedi's Order...
+                    He is still at the very start of his journey, but he seeks to build the skills and community
+                    to make this vision reality. Not long ago, he stumbled across this European Forum Alpbach
+                    and realized this might be a chance to make a warp jump on his way. 
+                </p>
+                <br>
+                <p class="text-center">
+                    So, Jan Aigner set his next waypoint to Alpbach, in the hope,
+                    to meet the right people and get the knowledge to step him one level up.
+                    Let's see what adventures await him...
                 </p>
                 
             </div>
         </section>
-
+        <section id="earth">
+            <div class="mapPosition">
+                <div id="map"></div>
+            </div>
+        </section>
         <audio src="https://raw.githubusercontent.com/glaucia86/sounds/master/starwars.mp3" id="sound"></audio>
         
-        <script src="js/intro.js"></script>
+        <script src="js/intro.js" type="module" ></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+          defer
+        ></script>
+
     </body>
 
 </html>
