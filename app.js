@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.send('App - Intro Star Wars');
+  res.send('App - Intro Star Wars');
 });
 
 const port = process.env.PORT || 8080;

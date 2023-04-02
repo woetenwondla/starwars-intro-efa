@@ -1,14 +1,14 @@
 {
   "name": "starwars-intro-efa",
   "version": "1.0.0",
-  "description": "Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js transitioning to congress centrum alpbach on maps",
+  "description": "Star Wars film intro animation developed in HTML, CSS, JavaScript and Node.js transitioning to congress centrum alpbach on google maps",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon",
     "lint": "eslint --ext .js -f ./node_modules/eslint-friendly-formatter . --fix",
     "build": "npm ci",
     "start": "node app.js",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
   "repository": {
@@ -22,15 +22,15 @@
   },
   "homepage": "https://github.com/woetenwondla/starwars-intro-efa#readme",
   "dependencies": {
+    "@snyk/protect": "^1.1133.0",
     "eslint-friendly-formatter": "^3.0.0",
     "express": "^4.18.2",
     "nodemon": "^2.0.20",
     "npm-check-updates": "^15.3.4",
-    "prettier": "^2.8.3",
-    "snyk": "^1.1094.0"
+    "prettier": "^2.8.7"
   },
   "devDependencies": {
-    "eslint": "^8.9.0",
+    "eslint": "^8.37.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "husky": "^7.0.4"

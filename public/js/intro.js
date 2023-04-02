@@ -1,6 +1,5 @@
-import { warpAnimation } from "./warp.js"
-import { setIncreaseSpeedTrue, setIncreaseSpeedFalse } from "./warp.js"
-import * as mapUtils from "./map.js";
+import { warpAnimation, setIncreaseSpeedTrue, setIncreaseSpeedFalse } from './warp.js';
+import * as mapUtils from './map.js';
 
 let width = window.innerWidth;
 let height = window.innerHeight;
@@ -12,22 +11,21 @@ const earthMap = document.getElementById('map');
 const paragraphs = document.getElementsByClassName('paragraphs')[0];
 const sound = document.getElementById('sound');
 
-intro.style.fontSize = width / 30 + 'px';
-story.style.fontSize = width / 20 + 'px';
-paragraphs.style.height = height + 'px';
+intro.style.fontSize = `${width / 30}px`;
+story.style.fontSize = `${width / 20}px`;
+paragraphs.style.height = `${height}px`;
 
 window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
-    intro.style.fontSize = width / 30 + 'px';
-    story.style.fontSize = width / 20 + 'px';
-    paragraphs.style.height = height + 'px';
+    intro.style.fontSize = `${width / 30}px`;
+    story.style.fontSize = `${width / 20}px`;
+    paragraphs.style.height = `${height}px`;
 });
 
 /* Stars screen */
 
 let canvas = document.getElementById('stars');
-const ctx = canvas.getContext('2d');
 
 canvas.width = width;
 canvas.height = height;
